@@ -91,4 +91,8 @@ defmodule Credo.Check.Warning.ExCoverallsUncovered do
       severity: 1
     )
   end
+
+  def report_card_score(%Credo.Issue{severity: sev}) do
+    10 * sev
+  end
 end
